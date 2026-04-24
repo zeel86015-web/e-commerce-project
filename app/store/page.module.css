@@ -1,0 +1,53 @@
+.store {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 8px 20px;
+  border-radius: 40px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:first-child {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.filterBtn:hover:not(:first-child) {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}

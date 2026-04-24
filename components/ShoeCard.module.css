@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1; /* Squarish for sneakers */
+  background: var(--bg-secondary);
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background var(--transition-fast);
+}
+
+.imageBackground {
+  display: none; /* No longer needed, cleaner flat background */
+}
+
+/* Override previous specific absolute sizing for ShoeCard image */
+.image {
+  object-fit: contain !important;
+  width: 85% !important;
+  height: auto !important;
+  position: relative !important;
+  transform: rotate(-20deg);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  filter: drop-shadow(15px 25px 15px rgba(0,0,0,0.15));
+}
+
+.card:hover .imageWrapper {
+  background: var(--bg-tertiary);
+}
+
+.card:hover .image {
+  transform: rotate(-12deg) scale(1.15) translateY(-10px) !important;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.category {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
